@@ -13,7 +13,7 @@ namespace RugbyAnalytics.Server.Core
     public class SocketListener
     {
         private readonly int _port;
-        private TcpListener? _listener;
+        private TcpListener _listener;
         private bool _isRunning;
 
         public SocketListener(int port = 5000)
