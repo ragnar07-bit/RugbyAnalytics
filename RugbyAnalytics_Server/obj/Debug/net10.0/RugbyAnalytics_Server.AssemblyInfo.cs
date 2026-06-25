@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RugbyAnalytics_Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5817c6b893f26e5d3894571dbe57c7b8b63e689")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+747246692a68c3dc86e4dc603e1c71fe1014433e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RugbyAnalytics_Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RugbyAnalytics_Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
