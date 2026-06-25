@@ -1,0 +1,21 @@
+# --- Python (Client) ---
+# Ignora l'ambiente virtuale locale
+venv/
+.venv/
+ENV/
+env/
+
+# File di cache di Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- .NET / C# (Server) ---
+# Ignora le cartelle di build e binari
+RugbyAnalytics_Server/bin/
+RugbyAnalytics_Server/obj/
+
+# --- Database ---
+# Ignora il database SQLite locale per evitare di sovrascrivere i dati di test tra PC e Cloud
+*.db
