@@ -1,4 +1,4 @@
-from network.packet import Packet
+from Network.packet import Packet
 
 class MatchViewModel:
     def __init__(self, network_client):
