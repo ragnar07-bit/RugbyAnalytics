@@ -1,74 +1,88 @@
 import customtkinter as ctk
 
-class MatchWindow(ctk.CTk):
-    def __init__(self, viewmodel):
+class LoginWindow(ctk.CTk):
+    def __init__(self, viewmodel, on_authenticated_callback):
         super().__init__()
         self.viewmodel = viewmodel
+        self.on_authenticated_callback = on_authenticated_callback
         
-        # Agganciamo il cambio dei dati alla nostra funzione di aggiornamento
-        self.viewmodel.on_match_data_changed = self.aggiorna_dashboard
+        # Assegnazione dei metodi grafici alle callback del ViewModel
+        self.viewmodel.on_status_changed = self.aggiorna_stato
+        self.viewmodel.on_login_success = self.gestisci_successo
 
-        # Configurazione Finestra di Gioco
-        self.title("RugbyAnalytics Enterprise - Pannello Bordo Campo")
-        self.geometry("600x450")
+        # Configurazione Finestra di Sistema
+        self.title("RugbyAnalytics Enterprise - Login")
+        self.geometry("400x520")
         self.resizable(False, False)
-
-        # Configurazione Layout Griglia
+        
+        # Layout Griglia
         self.grid_columnconfigure(0, weight=1)
-        self.grid_columnconfigure(1, weight=1)
 
-        # --- SEZIONE SUPERIORE: TABELLONE PUNTEGGIO ---
-        self.score_frame = ctk.CTkFrame(self, height=100)
-        self.score_frame.grid(row=0, column=0, columnspan=2, padx=20, pady=20, sticky="nsew")
-        self.score_frame.grid_columnconfigure((0, 1, 2), weight=1)
-
-        self.team_home_label = ctk.CTkLabel(self.score_frame, text="CASA", font=ctk.CTkFont(size=18, weight="bold"))
-        self.team_home_label.grid(row=0, column=0, pady=10)
-
-        self.score_label = ctk.CTkLabel(self.score_frame, text="00 - 00", font=ctk.CTkFont(size=28, weight="bold", text_color="#FFCC00"))
-        self.score_label.grid(row=0, column=1, pady=10)
-
-        self.team_away_label = ctk.CTkLabel(self.score_frame, text="OSPITI", font=ctk.CTkFont(size=18, weight="bold"))
-        self.team_away_label.grid(row=0, column=2, pady=10)
-
-        # --- SEZIONE INFERIORE: PULSANTIERA REGISTRAZIONE KPI ---
-        self.kpi_title = ctk.CTkLabel(self, text="REGISTRAZIONE EVENTI LIVE", font=ctk.CTkFont(size=14, weight="bold", text_color="gray"))
-        self.kpi_title.grid(row=1, column=0, columnspan=2, pady=(10, 5))
-
-        # Bottone Meta (Esempio Giocatore ID #10)
-        self.btn_meta = ctk.CTkButton(
-            self, text="🏉 META (Casa)", 
-            command=lambda: self.invia_evento("META", 10, 5, 0),
-            fg_color="#2E7D32", hover_color="#1B5E20", height=50, font=ctk.CTkFont(weight="bold")
+        # --- Componenti Grafici ---
+        self.title_label = ctk.CTkLabel(
+            self, 
+            text="RUGBY ANALYTICS", 
+            font=ctk.CTkFont(size=24, weight="bold")
         )
-        self.btn_meta.grid(row=2, column=0, padx=20, pady=10, sticky="nsew")
+        self.title_label.grid(row=0, column=0, padx=20, pady=(50, 10))
 
-        # Bottone Placcaggio (Esempio Giocatore ID #7)
-        self.btn_placcaggio = ctk.CTkButton(
-            self, text="💥 PLACCAGGIO", 
-            command=lambda: self.invia_evento("PLACCAGGIO", 7),
-            height=50, font=ctk.CTkFont(weight="bold")
+        self.subtitle_label = ctk.CTkLabel(
+            self, 
+            text="Pulsantiera Allenatore di Bordo Campo", 
+            font=ctk.CTkFont(size=13), #  Chiusa parentesi del Font
+            text_color="gray"          #  Passato correttamente alla Label
         )
-        self.btn_placcaggio.grid(row=2, column=1, padx=20, pady=10, sticky="nsew")
+        self.subtitle_label.grid(row=1, column=0, padx=20, pady=(0, 40))
 
-        # Bottone Touche Vinta (Esempio Giocatore ID #5)
-        self.btn_touche = ctk.CTkButton(
-            self, text="📐 TOUCHE VINTA", 
-            command=lambda: self.invia_evento("TOUCHE", 5),
-            fg_color="#1565C0", hover_color="#0D47A1", height=50, font=ctk.CTkFont(weight="bold")
+        self.username_input = ctk.CTkEntry(
+            self, 
+            placeholder_text="Username", 
+            width=280, 
+            height=40
         )
-        self.btn_touche.grid(row=3, column=0, columnspan=2, padx=20, pady=10, sticky="nsew")
+        self.username_input.grid(row=2, column=0, padx=20, pady=10)
 
-    def invia_evento(self, tipo_kpi, giocatore_id, punti_casa=0, punti_ospiti=0):
-        """Spedisce il pacchetto tramite il ViewModel e aggiorna il tabellone se necessario."""
-        # Se l'evento cambia il punteggio (es. la Meta), aggiorna lo stato locale
-        if punti_casa > 0 or punti_ospiti > 0:
-            self.viewmodel.aggiorna_punteggio(punti_casa, punti_ospiti)
-            
-        # Invia al server tramite Socket
-        self.viewmodel.registra_evento_kpi(tipo_kpi, giocatore_id)
+        self.password_input = ctk.CTkEntry(
+            self, 
+            placeholder_text="Password", 
+            show="*", 
+            width=280, 
+            height=40
+        )
+        self.password_input.grid(row=3, column=0, padx=20, pady=10)
 
-    def aggiorna_dashboard(self):
-        """Invocato quando i dati del ViewModel cambiano, rinfresca il tabellone dei punti."""
-        nuovo_score = f"{self.viewmodel.punteggio_casa:02d} - {self.viewmodel.punteggio_ospiti:02d}"
-        self.after(0, lambda: self.score_label.configure(text=nuovo_score))
+        self.login_button = ctk.CTkButton(
+            self, 
+            text="Accedi", 
+            command=self._on_login_click, 
+            width=280, 
+            height=42,
+            font=ctk.CTkFont(weight="bold")
+        )
+        self.login_button.grid(row=4, column=0, padx=20, pady=(25, 15))
+
+        # Questa è la label fondamentale che mancava nel tuo file mischiato!
+        self.status_label = ctk.CTkLabel(
+            self, 
+            text="", 
+            font=ctk.CTkFont(size=12, weight="bold")
+        )
+        self.status_label.grid(row=5, column=0, padx=20, pady=10)
+
+    def _on_login_click(self):
+        """Passa i dati al ViewModel all'evento di click."""
+        username = self.username_input.get()
+        password = self.password_input.get()
+        
+        self.login_button.configure(state="disabled")
+        self.viewmodel.authenticate(username, password)
+
+    def aggiorna_stato(self, messaggio: str, colore: str):
+        """Metodo di callback invocato dal ViewModel per scrivere i log sulla GUI."""
+        self.after(0, lambda: self.status_label.configure(text=messaggio, text_color=colore))
+        if "Errore" in messaggio or "fallita" in messaggio or "Campi" in messaggio:
+            self.after(0, lambda: self.login_button.configure(state="normal"))
+
+    def gestisci_successo(self):
+        """Invocato quando le credenziali sono verificate, avvisa l'app principale."""
+        self.after(0, self.on_authenticated_callback)
