@@ -15,6 +15,10 @@ class Packet:
 
         return json.dumps(payload) + "\n"
     
+    #Metodo che restituisce una stringa leggibile del pacchetto
+    def to_friendly_strin(self) -> str:
+        return f"[{self.action}] -> {json.dumps(self.data)}"
+    
     #Metodo factory che converte una stringa JSON in un oggetto
     @staticmethod
     def from_json_string(json_str: str):
