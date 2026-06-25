@@ -2,12 +2,21 @@
   "version": 3,
   "targets": {
     "net10.0": {
+<<<<<<< HEAD
       "Microsoft.Data.Sqlite/10.0.9": {
         "type": "package",
         "dependencies": {
           "Microsoft.Data.Sqlite.Core": "10.0.9",
           "SQLitePCLRaw.bundle_e_sqlite3": "2.1.11",
           "SQLitePCLRaw.core": "2.1.11"
+=======
+      "Microsoft.Data.Sqlite/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "9.0.0",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.10",
+          "SQLitePCLRaw.core": "2.1.10"
+>>>>>>> sviluppo-server
         },
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -16,10 +25,17 @@
           "lib/netstandard2.0/_._": {}
         }
       },
+<<<<<<< HEAD
       "Microsoft.Data.Sqlite.Core/10.0.9": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.1.11"
+=======
+      "Microsoft.Data.Sqlite.Core/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.10"
+>>>>>>> sviluppo-server
         },
         "compile": {
           "lib/net8.0/Microsoft.Data.Sqlite.dll": {
@@ -32,11 +48,19 @@
           }
         }
       },
+<<<<<<< HEAD
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.11": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.lib.e_sqlite3": "2.1.11",
           "SQLitePCLRaw.provider.e_sqlite3": "2.1.11"
+=======
+      "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.lib.e_sqlite3": "2.1.10",
+          "SQLitePCLRaw.provider.e_sqlite3": "2.1.10"
+>>>>>>> sviluppo-server
         },
         "compile": {
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
@@ -45,7 +69,11 @@
           "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
+<<<<<<< HEAD
       "SQLitePCLRaw.core/2.1.11": {
+=======
+      "SQLitePCLRaw.core/2.1.10": {
+>>>>>>> sviluppo-server
         "type": "package",
         "compile": {
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
@@ -160,10 +188,17 @@
           }
         }
       },
+<<<<<<< HEAD
       "SQLitePCLRaw.provider.e_sqlite3/2.1.11": {
         "type": "package",
         "dependencies": {
           "SQLitePCLRaw.core": "2.1.11"
+=======
+      "SQLitePCLRaw.provider.e_sqlite3/2.1.10": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.10"
+>>>>>>> sviluppo-server
         },
         "compile": {
           "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
@@ -175,16 +210,24 @@
     }
   },
   "libraries": {
+<<<<<<< HEAD
     "Microsoft.Data.Sqlite/10.0.9": {
       "sha512": "/eBwiZPcNisn0qZX+Zk4YCftlK/vnoWqv7hHnmSk8MjPxFdYYkmPObpogT0MfCCWN6oAIZnMCo0SoOtZlbbmgQ==",
       "type": "package",
       "path": "microsoft.data.sqlite/10.0.9",
+=======
+    "Microsoft.Data.Sqlite/9.0.0": {
+      "sha512": "lw6wthgXGx3r/U775k1UkUAWIn0kAT0wj4ZRq0WlhPx4WAOiBsIjgDKgWkXcNTGT0KfHiClkM+tyPVFDvxeObw==",
+      "type": "package",
+      "path": "microsoft.data.sqlite/9.0.0",
+>>>>>>> sviluppo-server
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "PACKAGE.md",
         "lib/netstandard2.0/_._",
+<<<<<<< HEAD
         "microsoft.data.sqlite.10.0.9.nupkg.sha512",
         "microsoft.data.sqlite.nuspec"
       ]
@@ -193,15 +236,31 @@
       "sha512": "iZrONyMKPjxfVZnUktqO30QjzNwAGH+AxM61s8lKQnVhgbQ3bn0hiXI129ZmVicEbIcwljyy2OVsIYUR51ZHKQ==",
       "type": "package",
       "path": "microsoft.data.sqlite.core/10.0.9",
+=======
+        "microsoft.data.sqlite.9.0.0.nupkg.sha512",
+        "microsoft.data.sqlite.nuspec"
+      ]
+    },
+    "Microsoft.Data.Sqlite.Core/9.0.0": {
+      "sha512": "cFfZjFL+tqzGYw9lB31EkV1IWF5xRQNk2k+MQd+Cf86Gl6zTeAoiZIFw5sRB1Z8OxpEC7nu+nTDsLSjieBAPTw==",
+      "type": "package",
+      "path": "microsoft.data.sqlite.core/9.0.0",
+>>>>>>> sviluppo-server
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "PACKAGE.md",
+<<<<<<< HEAD
+=======
+        "lib/net6.0/Microsoft.Data.Sqlite.dll",
+        "lib/net6.0/Microsoft.Data.Sqlite.xml",
+>>>>>>> sviluppo-server
         "lib/net8.0/Microsoft.Data.Sqlite.dll",
         "lib/net8.0/Microsoft.Data.Sqlite.xml",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
         "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
+<<<<<<< HEAD
         "microsoft.data.sqlite.core.10.0.9.nupkg.sha512",
         "microsoft.data.sqlite.core.nuspec"
       ]
@@ -210,6 +269,16 @@
       "sha512": "DC4nA7yWnf4UZdgJDF+9Mus4/cb0Y3Sfgi3gDnAoKNAIBwzkskNAbNbyu+u4atT0ruVlZNJfwZmwiEwE5oz9LQ==",
       "type": "package",
       "path": "sqlitepclraw.bundle_e_sqlite3/2.1.11",
+=======
+        "microsoft.data.sqlite.core.9.0.0.nupkg.sha512",
+        "microsoft.data.sqlite.core.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
+      "sha512": "UxWuisvZ3uVcVOLJQv7urM/JiQH+v3TmaJc1BLKl5Dxfm/nTzTUrqswCqg/INiYLi61AXnHo1M1JPmPqqLnAdg==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_e_sqlite3/2.1.10",
+>>>>>>> sviluppo-server
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -222,6 +291,7 @@
         "lib/net6.0-tvos10.0/SQLitePCLRaw.batteries_v2.dll",
         "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll",
         "lib/xamarinios10/SQLitePCLRaw.batteries_v2.dll",
+<<<<<<< HEAD
         "sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
         "sqlitepclraw.bundle_e_sqlite3.nuspec"
       ]
@@ -230,11 +300,25 @@
       "sha512": "PK0GLFkfhZzLQeR3PJf71FmhtHox+U3vcY6ZtswoMjrefkB9k6ErNJEnwXqc5KgXDSjige2XXrezqS39gkpQKA==",
       "type": "package",
       "path": "sqlitepclraw.core/2.1.11",
+=======
+        "sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+        "sqlitepclraw.bundle_e_sqlite3.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.core/2.1.10": {
+      "sha512": "Ii8JCbC7oiVclaE/mbDEK000EFIJ+ShRPwAvvV89GOZhQ+ZLtlnSWl6ksCNMKu/VGXA4Nfi2B7LhN/QFN9oBcw==",
+      "type": "package",
+      "path": "sqlitepclraw.core/2.1.10",
+>>>>>>> sviluppo-server
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/SQLitePCLRaw.core.dll",
+<<<<<<< HEAD
         "sqlitepclraw.core.2.1.11.nupkg.sha512",
+=======
+        "sqlitepclraw.core.2.1.10.nupkg.sha512",
+>>>>>>> sviluppo-server
         "sqlitepclraw.core.nuspec"
       ]
     },
@@ -286,24 +370,40 @@
         "sqlitepclraw.lib.e_sqlite3.nuspec"
       ]
     },
+<<<<<<< HEAD
     "SQLitePCLRaw.provider.e_sqlite3/2.1.11": {
       "sha512": "Y/0ZkR+r0Cg3DQFuCl1RBnv/tmxpIZRU3HUvelPw6MVaKHwYYR8YNvgs0vuNuXCMvlyJ+Fh88U1D4tah1tt6qw==",
       "type": "package",
       "path": "sqlitepclraw.provider.e_sqlite3/2.1.11",
+=======
+    "SQLitePCLRaw.provider.e_sqlite3/2.1.10": {
+      "sha512": "uZVTi02C1SxqzgT0HqTWatIbWGb40iIkfc3FpFCpE/r7g6K0PqzDUeefL6P6HPhDtc6BacN3yQysfzP7ks+wSQ==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.e_sqlite3/2.1.10",
+>>>>>>> sviluppo-server
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net6.0-windows7.0/SQLitePCLRaw.provider.e_sqlite3.dll",
         "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll",
         "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll",
+<<<<<<< HEAD
         "sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512",
+=======
+        "sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512",
+>>>>>>> sviluppo-server
         "sqlitepclraw.provider.e_sqlite3.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+<<<<<<< HEAD
       "Microsoft.Data.Sqlite >= 10.0.9"
+=======
+      "Microsoft.Data.Sqlite >= 9.0.0",
+      "SQLitePCLRaw.lib.e_sqlite3 >= 2.1.11"
+>>>>>>> sviluppo-server
     ]
   },
   "packageFolders": {
@@ -352,7 +452,15 @@
         "dependencies": {
           "Microsoft.Data.Sqlite": {
             "target": "Package",
+<<<<<<< HEAD
             "version": "[10.0.9, )"
+=======
+            "version": "[9.0.0, )"
+          },
+          "SQLitePCLRaw.lib.e_sqlite3": {
+            "target": "Package",
+            "version": "[2.1.11, )"
+>>>>>>> sviluppo-server
           }
         },
         "imports": [

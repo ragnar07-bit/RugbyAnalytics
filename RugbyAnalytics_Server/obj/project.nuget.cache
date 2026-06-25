@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "8wu6Tq7qPB4=",
   "success": true,
   "projectFilePath": "/home/rggs/Scrivania/Progetto Orale di Maturià/RugbyAnalytics/RugbyAnalytics_Server/RugbyAnalytics_Server.csproj",
@@ -10,6 +11,18 @@
     "/home/rggs/.nuget/packages/sqlitepclraw.core/2.1.11/sqlitepclraw.core.2.1.11.nupkg.sha512",
     "/home/rggs/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.11/sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
     "/home/rggs/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.11/sqlitepclraw.provider.e_sqlite3.2.1.11.nupkg.sha512"
+=======
+  "dgSpecHash": "OZUkPcMsOHE=",
+  "success": true,
+  "projectFilePath": "/home/rggs/Scrivania/Progetto Orale di Maturià/RugbyAnalytics/RugbyAnalytics_Server/RugbyAnalytics_Server.csproj",
+  "expectedPackageFiles": [
+    "/home/rggs/.nuget/packages/microsoft.data.sqlite/9.0.0/microsoft.data.sqlite.9.0.0.nupkg.sha512",
+    "/home/rggs/.nuget/packages/microsoft.data.sqlite.core/9.0.0/microsoft.data.sqlite.core.9.0.0.nupkg.sha512",
+    "/home/rggs/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.10/sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+    "/home/rggs/.nuget/packages/sqlitepclraw.core/2.1.10/sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "/home/rggs/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.11/sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
+    "/home/rggs/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.10/sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512"
+>>>>>>> sviluppo-server
   ],
   "logs": [
     {
