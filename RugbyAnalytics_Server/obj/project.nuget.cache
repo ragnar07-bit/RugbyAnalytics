@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "+PjjPprr/Nk=",
+  "success": true,
+  "projectFilePath": "/home/rggs/Scrivania/Progetto Orale di Maturià/RugbyAnalytics/RugbyAnalytics_Server/RugbyAnalytics_Server.csproj",
+  "expectedPackageFiles": [
+    "/home/rggs/.nuget/packages/microsoft.data.sqlite/9.0.0/microsoft.data.sqlite.9.0.0.nupkg.sha512",
+    "/home/rggs/.nuget/packages/microsoft.data.sqlite.core/9.0.0/microsoft.data.sqlite.core.9.0.0.nupkg.sha512",
+    "/home/rggs/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.10/sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512",
+    "/home/rggs/.nuget/packages/sqlitepclraw.core/2.1.10/sqlitepclraw.core.2.1.10.nupkg.sha512",
+    "/home/rggs/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.10/sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512",
+    "/home/rggs/.nuget/packages/sqlitepclraw.provider.e_sqlite3/2.1.10/sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Il pacchetto 'SQLitePCLRaw.lib.e_sqlite3' 2.1.10 presenta una vulnerabilità nota di gravità alta, https://github.com/advisories/GHSA-2m69-gcr7-jv3q",
+      "projectPath": "/home/rggs/Scrivania/Progetto Orale di Maturià/RugbyAnalytics/RugbyAnalytics_Server/RugbyAnalytics_Server.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/rggs/Scrivania/Progetto Orale di Maturià/RugbyAnalytics/RugbyAnalytics_Server/RugbyAnalytics_Server.csproj",
+      "libraryId": "SQLitePCLRaw.lib.e_sqlite3",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}
