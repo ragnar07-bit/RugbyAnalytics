@@ -62,7 +62,7 @@ class SocketClient:
             try:
                 data = self.client_socket.recv(1024)
                 if not data:
-                    print("[NETWORK] Connessoine interrotta dal server remoto.")
+                    print("[NETWORK] Connessione interrotta dal server remoto.")
                     break
 
                 buffer += data.decode('utf-8')
